@@ -1,0 +1,91 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background: linear-gradient(-45deg, rgb(126, 193, 127), #45a3da);
+}
+body > div {
+  width: 95vw; /* viewport width */
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+body > div > nav,
+main,
+aside,
+footer,
+header,
+content,
+sectiona,
+sectionb {
+  background: rgba(204, 204, 204);
+  margin: 5px;
+  padding: 20px;
+  border-radius: 20px; /* zaokrąglone */
+}
+body > div > header {
+  font-size: 5rem;
+  letter-spacing: 2vw;
+  text-align: center;
+  font-weight: bolder;
+  order: 1;
+  height: 100px; /* 15vh */
+  flex: 0 1 100vw;
+  font-family: "Lato", "sans-serif";
+}
+body > div > nav {
+  order: 2;
+  flex: 0 1 15%;
+}
+body > div > main {
+  order: 3;
+  min-height: 400;
+  flex: 1;
+  flex: 55%;
+  text-align: justify;
+}
+body > div > aside {
+  order: 4;
+  flex: 15%;
+}
+body > div > footer {
+  order: 9;
+  min-height: 20vh;
+  flex: 1;
+  flex: 100%;
+}
+body > div > content {
+  order: 6;
+  min-height: 100px;
+  flex: 1;
+  flex: 100vw;
+}
+body > div > sectiona {
+  order: 7;
+  min-height: 20vh;
+  flex: 1;
+  flex: 45%;
+}
+body > div > sectionb {
+  order: 8;
+  min-height: 20vh;
+  flex: 0;
+  flex: 45%;
+}
+.circle {
+  width: 200px;
+  height: 200px;
+  background: url(wiewiorka.jpg) no-repeat;
+  background-size: cover;
+  border-radius: 40% 40% 40% 40%;
+  float: left;
+  shape-outside: circle();
+  margin: 50px 20 px 20 px 20 px;
+  /* scale 20% */
+}
+/* to jest sekcja odpowiedzialna za responsywność strony */
+@media only screen and (max-width: 550px) {
+  body > div {
+    width: 550px;
+  }
+}
